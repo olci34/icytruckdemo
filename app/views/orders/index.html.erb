@@ -1,0 +1,26 @@
+
+<% if session[:truck_id] %>
+    <h1><%= @truck.name %>'s Incoming Orders</h1>
+<% else %>
+    <h1> Your Orders </h1>
+<%end%>
+
+<% if @orders.empty? %>
+    <h3>You don't have any orders<h3>
+<% else %>
+<% @orders.each do |o| %>
+    <span id="customer-name"><strong>Customer:</strong> <%= o.customer.name %></span>
+    <br>
+    <span id="customer-name"><strong>Truck:</strong> <%= o.truck.name %></span>
+    <br>
+    <span id="order-time"><strong>Time:</strong> <%= o.created_at.strftime("%R") %></span>
+    <br>
+    <% o.icecreams_orders.each do |io| %>
+        <div id="order"><strong><%= io.quantity %> <%= io.icecream.name %></strong></div>
+        <br>
+    <% end %>
+    <span id="order-total"><strong>Total: $<%= o.total%></strong></span>
+    <br>
+    <hr class="solid">
+<% end %>
+<% end %>

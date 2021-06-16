@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IcyTruck</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+      <% flash.each do |type, msg| %>
+      <div class = "flash-error">
+          <p><%= msg %></p>
+      </div>
+    <% end %>
+    
+    <nav>
+      <div class="nav-bar">
+      <% if session[:truck_id] %>
+        <%= render 'layouts/truck_layout' %>
+      <% elsif session[:customer_id] %>
+        <%= render 'layouts/customer_layout' %>
+      <% else %>
+        <%= render 'layouts/home_layout' %>
+      <% end %>
+      </div>
+    </nav>
+    
+    <div class="everything">
+    <%= yield %>
+    </div>
+  
+  </body>
+</html>

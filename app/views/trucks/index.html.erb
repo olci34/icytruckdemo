@@ -1,0 +1,26 @@
+<% if session[:truck_id] %>
+  <h1> Hello, <%= @truck.name %></h1>
+
+<div class="update-zipcode">
+  <% if @truck.zipcode.nil? %>
+    <p> <%= link_to "Update your zipcode", edit_truck_path(@truck) %></p>
+  <% end %>
+</div>
+
+<% else session[:customer_id] %>
+  <h1>Welcome <%= @customer.name %></h1>
+
+  <%= form_tag customer_trucks_path(@customer), method: :get do %>
+  <%= number_field_tag "search_zipcode" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+  <div class="update-zipcode">
+  <% if @customer.zipcode.nil? %>
+    <p> <%= link_to "Update your zipcode", edit_customer_path(@customer) %></p>
+  <% end %>
+</div>
+<% end %>
+<h3> Icecream trucks in your area </h3>
+
+<%= render(@trucks) || "There is no trucks in your area" %>

@@ -1,0 +1,14 @@
+<%= render partial: "application/errors", locals: {errors: @customer.errors.full_messages.to_sentence}%>
+<div class="customer-signup">
+    <%= form_for @customer do |f| %>
+        <%= f.label :zipcode %><br>
+        <%= f.number_field :zipcode%><br>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %> <br>
+        <%= f.label :email %><br>
+        <%= f.text_field :email %><br>
+        <%= f.label :password %><br>
+        <%= f.password_field :password %><br>
+        <%= f.submit %>
+    <% end %>
+</div>

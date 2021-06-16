@@ -1,0 +1,47 @@
+
+<h1>New Order</h1>
+<%= render partial: "application/errors", locals: {errors: @order.errors.full_messages.to_sentence}%>
+
+<div class="new-order">
+<div class="menu-headers">
+    <table>
+    <colgroup>
+        <col class="menu-icecream-header">
+        <col class="menu-quantity-header">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Icecreams</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    </table>
+</div>
+
+<div class="menu-form">
+    <div class="menu-list">
+        <div class="menu-icecreams"> 
+            <ul class="list-group list-group-vertical-sm">
+                <% @truck.icecreams.each do |ic| %>
+                    <li class="list-group-item"><%= ic.name %> - $<%= ic.price %></li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="menu-quantities">
+            <ul class="list-group list-group-vertical-sm">
+                <%= form_for @order, url: truck_orders_path(@truck) do |f| %>
+                    <%= f.fields_for :icecreams_orders do |fields| %>
+                        <li class="list-group-item">
+                            <%= fields.hidden_field :icecream_id %>
+                            <%= fields.number_field :quantity, min: 0%>
+                        </li>
+                     <% end %>
+                <div class="order-button"> 
+                    <%= f.submit "Place Order" %>
+                    <% end %>
+                </div> 
+            </ul>
+        </div>
+    </div>   
+</div>
+</div>                 

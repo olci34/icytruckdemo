@@ -1,0 +1,257 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: url(icybg.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+nav a {
+    padding: 20px;
+    text-decoration: none;
+    color: #ef5777;
+    font-size: 20px;
+    transition: all .2s ease-in-out;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px #303952, 0 0 5px darkblue;
+}
+
+div.nav-bar {
+    backdrop-filter: blur(4px);
+    border: 5px solid #fffa65;
+    border-radius: 25px;
+    margin-left: 15%;
+    width: 70%;
+    background-color: #f8c39186;
+    text-align: center;
+}
+
+h1 {
+    color: #ef5777;
+}
+
+div.welcome-home p {
+    color: #485460;
+}
+
+label {
+    color: #485460;
+}
+
+div.facebook-auth {
+    margin: 20px;
+    
+}
+
+div.facebook-auth a {
+    color: #3b5998;
+}
+
+
+div.everything {
+    backdrop-filter: blur(4px);
+    border: 5px solid #fffa65;
+    border-radius: 25px;
+    margin-left: 15%;
+    width: 70%;
+    background-color: #f8c39186;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    
+}
+li a {
+    color: #ef5777;
+    text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+li a:hover {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px #303952, 0 0 5px darkblue;
+}
+
+div.menu-button {
+    margin: 20px;
+    transition: all .2s ease-in-out;
+    margin-left: 40%;
+    width: 20%;
+    background-color: #ef5777;
+    border-radius: 25px;
+    height: 30px;
+}
+
+div.menu-button a {
+    transition: all .2s ease-in-out;
+    line-height: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+div.menu-button:hover {
+    color: white;
+    box-shadow: 1px 1px 2px black, 0 0 30px #303952, 0 0 5px #cf6a87;
+    text-shadow: 1px 1px 2px black, 0 0 25px #303952, 0 0 5px #cf6a87;
+}
+
+h3 {
+    color: #303952;
+}
+
+div.modal-backdrop.fade.show {
+    z-index: -1;
+}
+.modal-backdrop.show {
+    opacity: 0;
+}
+
+button.btn.btn-primary {
+    border-color: #ef5777;
+    background-color: #ef5777;
+}
+
+button.btn.btn-primary:hover {
+    color: white;
+    box-shadow: 1px 1px 2px black, 0 0 30px #303952, 0 0 5px #cf6a87;
+    text-shadow: 1px 1px 2px black, 0 0 25px #303952, 0 0 5px #cf6a87;
+}
+
+hr.solid {
+    border: 1px solid #ef5777;
+    width: 30%;
+}
+
+div.menu-form {
+    position: static;
+    width: 50%;
+}
+
+div.menu-list {
+    position: static;
+    height: 100%;
+    top: 0px;
+}
+
+div.new-order {
+    margin-left: 30%;
+    margin-bottom: 30%;
+}
+
+div.menu-icecreams {
+    position: relative;
+    float: left;
+    width: 50%;
+    font-size: 20px;
+}
+
+div.menu-quantities {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+li {
+    z-index: 4;
+}
+
+div.order-button {
+    margin-top: 20px;
+    position:relative;
+    text-align: center;
+}
+table {
+    position: relative;
+    width: 50%;
+}
+tr {
+    text-align: center;
+    font-size: 20px;
+}
+
+ul {
+    text-align: center;
+}
+
+span#customer-name {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px #303952, 0 0 5px #cf6a87;
+}
+
+span#order-time {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px #303952, 0 0 5px #cf6a87;
+}
+
+span#order-total {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px #303952, 0 0 5px green;
+}
+
+div#order {
+    padding-top: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px #cf6a87;
+}
+
+div.field_with_errors input {
+    border: 2px solid red;
+}
+
+div.errors {
+    height: fit-content;
+    margin-left: 15%;
+    width: 70%;
+    border: 2px solid rgba(255, 0, 0, 0.301);
+    background-color: rgba(255, 255, 255, 0.301);
+}
+
+div.errors p {
+    color: #ef5777;
+}
+
+div.update-zipcode p a {
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px #cf6a87;
+    transition: all .2s ease-in-out;
+}
+
+div.update-zipcode p a:hover {
+    text-shadow: 1px 1px 2px black, 0 0 25px #303952, 0 0 5px #cf6a87;
+    transform: scale(1.5);
+}
+
+div.flash-error {
+    border: 5px solid #fffa65;
+    backdrop-filter: blur(4px);
+    
+    border-radius: 25px;
+    margin-left: 15%;
+    width: 70%;
+    background-color: rgba(61, 117, 61, 0.315);
+}
+div.flash-error p {
+    
+    text-align: center;
+
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px #cf6a87;
+}

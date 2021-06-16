@@ -1,0 +1,11 @@
+<h1><%= @icecream.name %></h1>
+
+<h4>Flavors</h4>
+
+<i><%= @icecream.flavors_names %></i>
+<br>
+
+<% if session[:truck_id] && check_owner? %>
+    <%= button_to "Edit", edit_truck_icecream_path(@truck, @icecream), method: :get %>
+    <%= button_to "Delete", truck_icecream_path(@truck, @icecream), method: :delete %>
+<% end %>

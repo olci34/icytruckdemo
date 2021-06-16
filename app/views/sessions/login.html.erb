@@ -1,0 +1,17 @@
+<h1>Customer Log In</h1>
+
+<% if !@errors.empty?%>
+    <%= render partial: "application/errors", locals: {errors: @errors.to_sentence}%>
+<%end%>
+
+<div class="customer-login">
+<%= form_for :customer, url: login_path, method: :post do |f| %>
+    <%= f.label "Email: " %><br>
+    <%= f.text_field :email %><br>
+    <%= f.label "Password: "%><br>
+    <%= f.password_field :password %><br>
+    <%= f.submit "Log In" %>
+<% end %>
+</div>
+
+<%= render partial: 'application/facebook', locals: {task: "Log In"} %>

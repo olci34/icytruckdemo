@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  zpassword_digest: MyString
+  zipcode: 1
+  online: false
+
+two:
+  name: MyString
+  zpassword_digest: MyString
+  zipcode: 1
+  online: false

@@ -1,0 +1,4 @@
+<%= form_tag truck_path(@truck.id), method: :get do %>
+    <%= collection_select :flavors, :flavor_name, Flavor.all, :name, :name %>
+    <%= submit_tag "Flavor Search" %>
+<% end %>
