@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_03_30_192220) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -25,8 +28,8 @@ ActiveRecord::Schema.define(version: 2021_03_30_192220) do
   end
 
   create_table "flavors_icecreams", force: :cascade do |t|
-    t.integer "icecream_id"
-    t.integer "flavor_id"
+    t.bigint "icecream_id"
+    t.bigint "flavor_id"
     t.index ["flavor_id"], name: "index_flavors_icecreams_on_flavor_id"
     t.index ["icecream_id"], name: "index_flavors_icecreams_on_icecream_id"
   end
