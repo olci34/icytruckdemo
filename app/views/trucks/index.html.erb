@@ -3,7 +3,7 @@
 
 <div class="update-zipcode">
   <% if @truck.zipcode.nil? %>
-    <p> <%= link_to "Update your zipcode", edit_truck_path(@truck) %></p>
+    <p> <%= link_to "Update your zip code", edit_truck_path(@truck) %></p>
   <% end %>
 </div>
 
@@ -12,15 +12,15 @@
 
   <%= form_tag customer_trucks_path(@customer), method: :get do %>
   <%= number_field_tag "search_zipcode" %>
-  <%= submit_tag "Search" %>
+  <%= submit_tag "Search Zip Code" %>
 <% end %>
 
   <div class="update-zipcode">
   <% if @customer.zipcode.nil? %>
-    <p> <%= link_to "Update your zipcode", edit_customer_path(@customer) %></p>
+    <p> <%= link_to "Update your zip code", edit_customer_path(@customer) %></p>
   <% end %>
 </div>
 <% end %>
-<h3> Icecream trucks in your area </h3>
+<h3> Ice cream trucks in your area </h3>
 
 <%= render(@trucks) || "There is no trucks in your area" %>
